@@ -1,0 +1,126 @@
+$lt-gray:#ddd;
+$background-dark:#D0963E;
+
+$background-pale:#949494;
+
+//height variables
+$carousel-item-height: 300px;
+
+@mixin zero-margin($pad-up-dn, $pad-left-right){
+    margin: 0px auto;
+    padding: $pad-up-dn $pad-left-right;
+}
+.row-header{
+    @include zero-margin(0px ,0px);
+
+}
+.row-content{
+    @include zero-margin(50px,0px);
+    border-bottom: 1px ridge;
+    min-height: 400px;
+}
+.footer{
+    background-color: $background-pale;
+    @include zero-margin(20px,0px);
+}
+.jumbotron{
+    @include zero-margin(70px,30px);
+    background-image: url('background-adare-restaurant.jpg') ;
+    height: 70vh;
+    background-size: cover;
+    
+    background-position: center;
+    color: floralwhite;
+    border-radius: 0px !important;
+    h1{
+        font-family: sabon ;
+        line-height: 1.5;
+        font-size: 3rem;}
+        p{
+            line-height: 1.5;
+            font-family:Arial, Helvetica, sans-serif;
+           }
+}
+address{
+    font-size:80%;
+    margin:0px;
+    color:#0f0f0f;
+}
+
+body{
+    padding: 0px 0px 0px 0px;
+    z-index:0;
+}
+.navbar{
+    background-color: rgba(168, 165, 165, 0.452);
+   }
+.tab-content{
+    border-left:  1px solid $lt-gray;
+    border-right: 1px solid $lt-gray ;
+    border-bottom:1px solid $lt-gray ;
+    padding: 10px;
+}
+.carousel{
+    background: $background-dark;
+    .carousel-item{
+        height: $carousel-item-height;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-height: 300px;
+        }
+    }
+}
+#carouselButton {
+    right:0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
+.carousel-caption{
+    margin-left: 200px;
+}
+.modal-header{
+    background: $background-dark;
+    .modal-title{
+        color: white;
+        
+    }
+    .close{
+        color: floralwhite;
+    }
+  
+}
+.modal-body{
+    background-color: $background-pale;
+}
+.navbar-toggler{
+    color: floralwhite !important;
+    border: none !important;
+    outline: none !important;
+  }
+  #reserveBtn{
+    
+    margin-top: 2rem;
+    color: floralwhite;
+  }
+  .btn-outline-light{
+    border-color: #D0963E;
+  }
+  .intro{
+    margin-top: 2.5rem;
+  }
+  .img-thumbnail{
+    width:15rem;
+    
+    border: none;
+  }
+  .media-body , .media-title{
+    padding-top: 5.5rem;
+  }
+  @media only screen and (max-width: 600px){
+    .img-thumbnail{
+      width:10rem ;
+    }
+  }
